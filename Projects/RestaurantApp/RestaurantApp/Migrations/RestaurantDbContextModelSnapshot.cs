@@ -81,7 +81,7 @@ namespace RestaurantApp.Migrations
 
             modelBuilder.Entity("RestaurantApp.Models.OrderMaster", b =>
                 {
-                    b.Property<long>("OrderItemId")
+                    b.Property<long>("OrderMasterId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -98,7 +98,7 @@ namespace RestaurantApp.Migrations
                     b.Property<string>("PMethod")
                         .HasColumnType("nvarchar(10)");
 
-                    b.HasKey("OrderItemId");
+                    b.HasKey("OrderMasterId");
 
                     b.HasIndex("CustomerId");
 
